@@ -13,6 +13,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12'
+      - run: react-scripts --openssl-legacy-provider start
       - run: npm ci
       - run: npm run build
       - name: GitHub Action for Firebase
